@@ -1983,7 +1983,7 @@ function initFromData(data) {
 var Module = {
 	canvas: canvas,
 	noInitialRun: true,
-	arguments: ["/rom/rom.bin", "--verbose"],
+	arguments: [rom, "--verbose"],
 	onRuntimeInitialized: function() {
 		wasmReady = true;
 		log("WASM ready");
