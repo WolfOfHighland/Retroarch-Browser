@@ -2006,3 +2006,13 @@ var Module = {
 		log("stderr: " + text);
 	}
 };
+window.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("canvas");
+  const params = new URLSearchParams(window.location.search);
+  const core = params.get("core");
+  const rom = params.get("rom");
+
+  if (canvas && core && rom) {
+    bootEmulator(canvas, core, rom);
+  }
+});
